@@ -78,7 +78,7 @@
                                             <td>{{$product->created_at}}</td>
                                             <td>{{$product->price}}</td>
                                             <td>
-                                                <div class="d-flex justify-content-start>
+                                                <div class="d-flex justify-content-start">
                                                     <a href='{{route('product.edit', $product->id)}}'
                                                         class="btn btn-sm btn-info btn-icon">
                                                         <i class="fas fa-edit"> Edit</i>
