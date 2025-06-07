@@ -69,6 +69,7 @@
                                             <th>Category</th>
                                             <th>Created At</th>
                                             <th>Price</th>
+                                            <th>Photo</th>
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($products as $product )
@@ -77,6 +78,13 @@
                                             <td>{{$product->category}}</td>
                                             <td>{{$product->created_at}}</td>
                                             <td>{{$product->price}}</td>
+                                            <td>
+                                                @if ($product->image)
+                                                    <img src="{{ asset('storage/products/'.$product->image) }}" alt="Product Image" width="100px" class="img-thumbnail">
+                                                @else
+                                                <span class="badge badge-danger">No Images</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <div class="d-flex justify-content-start">
                                                     <a href='{{route('product.edit', $product->id)}}'
